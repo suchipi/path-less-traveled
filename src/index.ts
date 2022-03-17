@@ -1,6 +1,11 @@
 import path from "path";
 
-export function pathLessTraveled(baseDir: string) {
+export interface PathMarker {
+  (...parts: Array<string>): string;
+  relative(otherPath: string): string;
+}
+
+export function pathMarker(baseDir: string): PathMarker {
   return Object.assign(
     (...parts: Array<string>) => {
       return path.resolve(baseDir, ...parts);

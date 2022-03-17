@@ -7,9 +7,9 @@ Utility that makes it easier to reference paths relative to some base dir throug
 `root-dir.js`
 
 ```js
-const { pathLessTraveled } = require("path-less-traveled");
+const { pathMarker } = require("path-less-traveled");
 
-module.exports = pathLessTraveled(__dirname);
+module.exports = pathMarker(__dirname);
 ```
 
 `some-other-file.js`
