@@ -23,6 +23,11 @@ console.log(rootDir("src", "index.js")); // "/home/suchipi/my-project/src/index.
 
 const absolutePathToSomething = rootDir("dist/index.js");
 console.log(rootDir.relative(absolutePathToSomething)); // dist/index.js
+
+// You can also create child path markers via `concat`:
+const srcDir = rootDir.concat("src");
+console.log(srcDir()); // "/home/suchipi/my-project/src"
+console.log(srcDir("index.js")); // "/home/suchipi/my-project/src/index.js"
 ```
 
 ## Notes
