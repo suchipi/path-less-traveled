@@ -3,7 +3,7 @@
   "version": "2.1.0",
   "description": "Utility that makes it easier to reference paths relative to some base dir throughout your codebase.",
   "main": "dist/index.js",
-  "types": "src/index.ts",
+  "types": "dist/index.d.ts",
   "devDependencies": {
     "@types/node": "^17.0.21",
     "prettier": "^2.5.1",
