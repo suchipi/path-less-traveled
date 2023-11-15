@@ -5,7 +5,9 @@ export interface PathMarker {
   relative(otherPath: string): string;
 }
 
-export function pathMarker(baseDir: string): PathMarker {
+export function pathMarker(...base: Array<string>): PathMarker {
+  const baseDir = path.resolve(...base);
+
   return Object.assign(
     (...parts: Array<string>) => {
       return path.resolve(baseDir, ...parts);
